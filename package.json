@@ -1,0 +1,33 @@
+{
+  "name": "indo-news-scraper",
+  "version": "1.0.0",
+  "description": "Indonesia online news scrapper made using NodeJS",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theyudhiztira/indonesia-news-scraper.git"
+  },
+  "keywords": [
+    "scraper",
+    "crawler",
+    "news",
+    "indonesia",
+    "berita"
+  ],
+  "author": "Pandu Yudhistira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theyudhiztira/indonesia-news-scraper/issues"
+  },
+  "homepage": "https://github.com/theyudhiztira/indonesia-news-scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "loadash": "^1.0.0",
+    "moment": "^2.27.0",
+    "puppeteer": "^5.2.0"
+  }
+}
