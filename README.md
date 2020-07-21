@@ -7,7 +7,7 @@ This package is a package to help you fetch single page news from Indonesian new
 Use the package manager [npm](https://www.npmjs.com/get-npm) to install indo-news-scraper.
 
 ```bash
-pip install foobar
+npm i indo-news-scraper
 ```
 
 ## Available News Portal
