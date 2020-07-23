@@ -15,6 +15,7 @@ npm i indo-news-scraper
 - Antara
 - Kompas
 - Republika
+- Liputan6
 
 ## Usage
 You can simply use the scrap function and pass the `KEYWORDS` as the parameter.

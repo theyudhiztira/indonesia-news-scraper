@@ -1,6 +1,6 @@
 {
   "name": "indo-news-scraper",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Indonesia online news scrapper made for NodeJS",
   "main": "lib/index.js",
   "scripts": {
