@@ -16,6 +16,7 @@ npm i indo-news-scraper
 - Kompas
 - Republika
 - Liputan6
+- Tempo
 
 ## Usage
 You can simply use the scrap function and pass the `KEYWORDS` as the parameter.
