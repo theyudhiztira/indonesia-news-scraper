@@ -1,5 +1,8 @@
 # Indo News Scraper [Beta]
 
+![npm](https://img.shields.io/npm/dt/indo-news-scraper?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/theyudhiztira/indonesia-news-scraper?style=flat-square)
+
 This package is a package to help you fetch single page news from Indonesian news websites.
 
 ## Installation
@@ -17,6 +20,7 @@ npm i indo-news-scraper
 - Republika
 - Liputan6
 - Tempo
+- Suara
 
 ## Usage
 You can simply use the scrap function and pass the `KEYWORDS` as the parameter.
