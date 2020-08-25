@@ -1,6 +1,6 @@
 {
   "name": "indo-news-scraper",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Indonesia online news scrapper made for NodeJS",
   "main": "lib/index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.27.0",
-    "puppeteer": "^5.2.0"
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^5.2.1"
   }
 }
