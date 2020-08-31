@@ -14,13 +14,14 @@ npm i indo-news-scraper
 ```
 
 ## Available News Portal
-- Detik
 - Antara
+- Detik
 - Kompas
-- Republika
 - Liputan6
-- Tempo
+- Republika
 - Suara
+- Tempo
+- Viva
 
 ## Usage
 You can simply use the scrap function and pass the `KEYWORDS` as the parameter.

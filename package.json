@@ -1,7 +1,7 @@
 {
   "name": "indo-news-scraper",
-  "version": "1.3.0",
-  "description": "Indonesia online news scrapper made for NodeJS",
+  "version": "1.4.0",
+  "description": "A news scraper for javascript that help to scrap news from Indonesian news portal.",
   "main": "lib/index.js",
   "scripts": {
     "test": "nodemon index.js"
@@ -15,9 +15,17 @@
     "crawler",
     "news",
     "indonesia",
-    "berita"
+    "berita",
+    "nodejs",
+    "node-modules",
+    "news api",
+    "indo-news-scraper",
+    "news scraper"
   ],
-  "author": "Pandu Yudhistira",
+  "author": {
+    "name": "Pandu Yudhistira",
+    "email": "theyudhiztira@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/theyudhiztira/indonesia-news-scraper/issues"
@@ -27,7 +35,6 @@
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.27.0",
-    "node-fetch": "^2.6.0",
     "puppeteer": "^5.2.1"
   }
 }
