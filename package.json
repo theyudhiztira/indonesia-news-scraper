@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/theyudhiztira/indonesia-news-scraper#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.3",
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.27.0",
     "puppeteer": "^5.2.1"
