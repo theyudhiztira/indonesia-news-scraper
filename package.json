@@ -35,6 +35,6 @@
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.27.0",
-    "puppeteer": "^5.2.1"
+    "puppeteer": "^18.2.0"
   }
 }
