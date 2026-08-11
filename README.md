@@ -1,43 +1,94 @@
-# Indo News Scraper [Beta]
+# Indonesian News Scraper
 
-![npm](https://img.shields.io/npm/dt/indo-news-scraper?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/theyudhiztira/indonesia-news-scraper?style=flat-square)
+Scrape Indonesian news portal search results. Returns `{title, url, img, date}` per keyword query.
 
-This package is a package to help you fetch single page news from Indonesian news websites.
+[![npm](https://img.shields.io/npm/v/indonesian-news-scraper?style=flat-square)](https://www.npmjs.com/package/indonesian-news-scraper)
+[![GitHub last commit](https://img.shields.io/github/last-commit/theyudhiztira/indonesia-news-scraper?style=flat-square)](https://github.com/theyudhiztira/indonesia-news-scraper)
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com/get-npm) to install indo-news-scraper.
-
 ```bash
-npm i indo-news-scraper
+npm install indonesian-news-scraper
+# or
+bun add indonesian-news-scraper
 ```
 
-## Available News Portal
-- Antara
-- Detik
-- Kompas
-- Liputan6
-- Republika
-- Suara
-- Tempo
-- Viva
+## Available News Portals
+
+| Portal   | Status |
+| -------- | ------ |
+| Detik    | ✅     |
+| Kompas   | ✅     |
+| Liputan6 | ✅     |
+| Antara   | ✅     |
+| Suara    | ✅     |
+| Viva     | ✅     |
+
+> Tempo and Republika are currently unavailable due to upstream site changes. See [Known Limitations](#known-limitations).
 
 ## Usage
-You can simply use the scrap function and pass the `KEYWORDS` as the parameter.
 
-```javascript
-import { Detik } from 'indo-news-scraper';
+```typescript
+import { detik, kompas, liputan6 } from 'indonesian-news-scraper';
 
-Detik.scrap('put your keywords here').then(res => {
- console.log(res);
-});
+// Basic usage — each scraper has a `scrap(keyword)` method
+const results = await detik.scrap('jakarta');
+console.log(results);
+// [
+//   { title: '...', url: 'https://...', img: 'https://...', date: '2026-08-10T...' },
+//   ...
+// ]
+
+// Use multiple scrapers
+const [detikNews, kompasNews] = await Promise.all([
+  detik.scrap('ekonomi'),
+  kompas.scrap('ekonomi'),
+]);
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+```javascript
+// CommonJS
+const { detik } = require('indonesian-news-scraper');
+detik.scrap('jakarta').then(console.log);
+```
 
-Please make sure to update tests as appropriate.
+### Result shape
+
+```typescript
+interface SearchResult {
+  title: string;  // Article headline
+  url: string;    // Full article URL
+  img: string;    // Thumbnail image URL
+  date: string;   // ISO 8601 date string
+}
+```
+
+## API
+
+Every scraper exports both a class and a singleton instance:
+
+```typescript
+import { Detik, detik } from 'indonesian-news-scraper';
+
+// Singleton (recommended)
+await detik.scrap('jakarta');
+
+// Fresh instance
+const myDetik = new Detik();
+await myDetik.scrap('jakarta');
+```
+
+Available exports: `detik`, `kompas`, `liputan6`, `antara`, `suara`, `viva` (singletons) and `Detik`, `Kompas`, `Liputan6`, `Antara`, `Suara`, `Viva` (classes).
+
+## Development
+
+```bash
+bun install           # install dependencies
+bun run typecheck     # check types
+bun run build         # compile to dist/
+bun test              # run integration tests (~35s)
+```
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)

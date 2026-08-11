@@ -1,10 +1,33 @@
 {
-  "name": "indo-news-scraper",
-  "version": "1.4.0",
-  "description": "A news scraper for javascript that help to scrap news from Indonesian news portal.",
-  "main": "lib/index.js",
+  "name": "indonesian-news-scraper",
+  "version": "2.0.0",
+  "description": "Scrape Indonesian news portal search results — returns {title, url, img, date} per keyword.",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "nodemon index.js"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,10 +40,8 @@
     "indonesia",
     "berita",
     "nodejs",
-    "node-modules",
-    "news api",
-    "indo-news-scraper",
-    "news scraper"
+    "news-scraper",
+    "indonesian-news"
   ],
   "author": {
     "name": "Pandu Yudhistira",
@@ -32,9 +53,17 @@
   },
   "homepage": "https://github.com/theyudhiztira/indonesia-news-scraper#readme",
   "dependencies": {
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.3",
-    "moment": "^2.27.0",
-    "puppeteer": "^22.8.2"
+    "@types/puppeteer": "^7.0.4",
+    "cheerio": "^1.0.0",
+    "dayjs": "^1.11.13",
+    "puppeteer": "^24.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.0"
   }
 }
