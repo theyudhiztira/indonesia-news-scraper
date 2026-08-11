@@ -2,15 +2,15 @@
 
 Scrape Indonesian news portal search results. Returns `{title, url, img, date}` per keyword query.
 
-[![npm](https://img.shields.io/npm/v/indonesian-news-scraper?style=flat-square)](https://www.npmjs.com/package/indonesian-news-scraper)
+[![npm](https://img.shields.io/npm/v/indo-news-scraper?style=flat-square)](https://www.npmjs.com/package/indo-news-scraper)
 [![GitHub last commit](https://img.shields.io/github/last-commit/theyudhiztira/indonesia-news-scraper?style=flat-square)](https://github.com/theyudhiztira/indonesia-news-scraper)
 
 ## Installation
 
 ```bash
-npm install indonesian-news-scraper
+npm install indo-news-scraper
 # or
-bun add indonesian-news-scraper
+bun add indo-news-scraper
 ```
 
 ## Available News Portals
@@ -24,12 +24,10 @@ bun add indonesian-news-scraper
 | Suara    | ✅     |
 | Viva     | ✅     |
 
-> Tempo and Republika are currently unavailable due to upstream site changes. See [Known Limitations](#known-limitations).
-
 ## Usage
 
 ```typescript
-import { detik, kompas, liputan6 } from 'indonesian-news-scraper';
+import { detik, kompas, liputan6 } from 'indo-news-scraper';
 
 // Basic usage — each scraper has a `scrap(keyword)` method
 const results = await detik.scrap('jakarta');
